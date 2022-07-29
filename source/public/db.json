@@ -1,0 +1,21 @@
+[
+	{
+		"id": 1,
+		"name": "example",
+		"mod_title": "example",
+		"mod_creator": "anon",
+		"mod_artist": "anon",
+		"song_artist": "Komdog",
+		"song_title": "Goat House",
+		"release_date": "1990-01-01",
+		"download_link": "#",
+		"length": "1:11",
+		"preview_imgs": "loop0.png",
+		"thumb_img": "thumb.png",
+		"download_type": "discord",
+		"status": null,
+		"tags": "mlp,furry,reskin",
+		"folder": "example",
+		"bpm": null
+	}
+]
