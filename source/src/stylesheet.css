@@ -199,6 +199,13 @@ canvas {
         opacity: 0;
     }
 
+    .headerWrapper * {
+        margin: auto;
+        text-align: center !important;
+        padding-left: initial !important;
+        padding-right: initial !important;
+    }
+
 }
 
 .metaGrid{

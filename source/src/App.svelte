@@ -64,7 +64,7 @@
           <cite>Number of Entries: {count}</cite>
         </figcaption>
         <figcaption class="blockquote-footer">
-          <img class="shield" src="https://img.shields.io/github/last-commit/JayJayDD/JayJayDD.github.io?color=%230b132b&label=latest%20update&style=flat-square">
+          <img alt="git badge" class="shield" src="https://img.shields.io/github/last-commit/JayJayDD/JayJayDD.github.io?color=%230b132b&label=latest%20update&style=flat-square">
         </figcaption>
       </figure>
     </div>

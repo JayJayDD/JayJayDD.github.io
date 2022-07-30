@@ -1,5 +1,7 @@
 <script>
+    import { onMount } from "svelte";
     import Preview from "./Preview.svelte";
+    import Image from "./Image.svelte";
     export let mod_title
     export let mod_creator
     export let preview_imgs
@@ -16,11 +18,25 @@
     export let selectedTags
     export let page
 
-    async function fetchPreview(ref){
-        const res = await fetch('/catalog/db.json')
-        let text = await res.json()
+    let selfElement;
+
+/*     function getImage(url){
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.className = "metaPreview img-fluid"
+            img.alt = "preview"
+            img.addEventListener('load', () => resolve(img));
+            img.addEventListener('error', (err) => reject(err));
+            img.src = url;
+        });
     }
 
+    let imagePreview = fetchPreview("mods/" + folder + "/anims/" + preview_imgs)
+
+    async function fetchPreview(url){
+        let image = getImage(url)
+        return image
+    } */
     function selectTag(value){
         page = 1
         if (selectedTags.findIndex(e => e === value) == -1){
@@ -33,8 +49,8 @@
 <div class="modCard"> 
     <div class="metaHeader">
         <div class="metaPreview img-fluid">
-            <img alt="preview" loading=lazy class="metaPreview img-fluid" src={"mods/" + folder + "/anims/" + preview_imgs}> <!--TODO: realize src loading through promises pls-->
             <Preview imageSource={"mods/" + folder + "/anims/" + preview_imgs}/>
+            <Image src={"mods/" + folder + "/anims/" + preview_imgs} alt="preview" cls="metaPreview img-fluid"/>
         </div>
     </div>
     <div class="metaContent p-2 row d-flex justify-content-between mx-auto">
