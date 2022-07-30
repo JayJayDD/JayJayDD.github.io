@@ -23,7 +23,7 @@
     }
   }
 
-  function getTags(database){//could be slow needs await
+  function getTags(database){
         let tmp
         for (let x of database){
           if (x.tags != null){
