@@ -16,6 +16,11 @@
     export let selectedTags
     export let page
 
+    async function fetchPreview(ref){
+        const res = await fetch('/catalog/db.json')
+        let text = await res.json()
+    }
+
     function selectTag(value){
         page = 1
         if (selectedTags.findIndex(e => e === value) == -1){
@@ -28,7 +33,7 @@
 <div class="modCard"> 
     <div class="metaHeader">
         <div class="metaPreview img-fluid">
-            <img alt="preview" loading=lazy class="metaPreview img-fluid" src={"mods/" + folder + "/anims/" + preview_imgs}>
+            <img alt="preview" loading=lazy class="metaPreview img-fluid" src={"mods/" + folder + "/anims/" + preview_imgs}> <!--TODO: realize src loading through promises pls-->
             <Preview imageSource={"mods/" + folder + "/anims/" + preview_imgs}/>
         </div>
     </div>

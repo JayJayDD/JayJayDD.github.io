@@ -82,13 +82,10 @@
 
     async function filterModsByTags(){ //could be slow
         let temp = []
-        console.log("tags")
         if (selectedTags.length === 0){
-            //data = structuredClone(data)
                 database = rootDataBase
                 database = database
         }
-            //data = structuredClone(data)
             database = rootDataBase
             database = database
         for (let i = 0; i < database.length; i++){

@@ -8,19 +8,16 @@
   let count = 0
   let selectedTags = []
   let tags = [];
-  let filter = [];
-  //let data = structuredClone(database.sort())
   let data = {}
 
-  async function getDatabase(filter){
+  async function getDatabase(){
     const res = await fetch('/catalog/db.json')
     let text = await res.json()
 
     if (res.ok) {
-      //data = structuredClone(text)
-      getTags(structuredClone(text))
-      count = structuredClone(text).length
-      return structuredClone(text);
+      getTags(text)
+      count = text.length
+      return text;
     } else {
       throw new Error(text);
     }
@@ -77,7 +74,7 @@
       <div class="mx-auto row primary">
         <div class="spinner row my-4 m-4">
           <div class="spinner-border mx-auto" role="status">
-            <span class="visually-hidden">Loading...</span>
+            <span class="visually-hidden">Fetching...</span>
           </div>
         </div>
       </div>
