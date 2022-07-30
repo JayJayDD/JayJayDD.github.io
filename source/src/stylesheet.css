@@ -172,6 +172,11 @@ canvas {
     font-size: 0.8em;
 }
 
+.spinner {
+    align-content: center;
+    height: 50vh;
+}
+
 @media (max-width: 768px){
     .metaGrid{
         grid-column-gap: 10px;

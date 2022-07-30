@@ -74,7 +74,13 @@
   </div>
   <div class="mx-auto row primary">
     {#await getDatabase()}
-      <p>loading</p>
+      <div class="mx-auto row primary">
+        <div class="spinner row my-4 m-4">
+          <div class="spinner-border mx-auto" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
     {:then data}
       <Primary selectedTags={selectedTags} count={count} database={data} tags={tags} />
     {:catch error}
