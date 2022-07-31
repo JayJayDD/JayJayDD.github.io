@@ -170,8 +170,8 @@
 </script>
 <div class="col-md-9 order-2 order-md-1 px-5 py-4 main">
     <div class="d-grid metaGrid">
-        {#each result.slice((elementsPerPage * page) - elementsPerPage,elementsPerPage * page) as {mod_title, mod_creator, preview_imgs, mod_artist, song_artist, release_date, song_title, thumb_img, length, tags, folder, download_type, download_link}, i} 
-            <ModCard bind:page={page} bind:selectedTags={selectedTags} mod_title={mod_title} mod_creator={mod_creator} preview_imgs={preview_imgs} mod_artist={mod_artist} song_artist={song_artist} release_date={release_date} song_title={song_title} thumb_img={thumb_img} length={length} tags={tags} folder={folder} download_type={download_type} download_link={download_link}/>
+        {#each result.slice((elementsPerPage * page) - elementsPerPage,elementsPerPage * page) as {mod_title, mod_creator, preview_imgs, mod_artist, song_artist, release_date, song_title, thumb_img, length, tags, folder, download_type, download_link, bpm}, i} 
+            <ModCard bind:page={page} bind:selectedTags={selectedTags} mod_title={mod_title} mod_creator={mod_creator} preview_imgs={preview_imgs} mod_artist={mod_artist} song_artist={song_artist} release_date={release_date} song_title={song_title} thumb_img={thumb_img} length={length} tags={tags} folder={folder} download_type={download_type} download_link={download_link} bpm={bpm}/>
         {/each}          
     </div>
 </div>

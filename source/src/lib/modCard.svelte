@@ -15,6 +15,7 @@
     export let folder
     export let download_type
     export let download_link
+    export let bpm
     export let selectedTags
     export let page
 
@@ -87,7 +88,10 @@
                 <img class="svg-icons" alt="mod length" src="assets/timelapse.svg">
                 <span class="align-middle">{length.split(":")[0] + " Min " + length.split(":")[1] + " Secs"}</span>
             </div>
-            
+            <div class="text-wrap metaTags">
+                <img class="svg-icons" alt="mod length" src="assets/bpm.svg">
+                <span class="align-middle">{bpm + " BPM"}</span>
+            </div>
             <div class="text-wrap metaTags">
                 <img class="svg-icons" alt="tags" src="assets/tag.svg">
                 {#if (tags != null)}
