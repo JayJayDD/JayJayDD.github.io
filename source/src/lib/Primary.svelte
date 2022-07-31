@@ -126,7 +126,7 @@
         //return temp
     }
 
-    function filterModsByQuery(){
+/*     function filterModsByQuery(){
         //database = rootDataBase
         previousQuery = queryName
         if (queryName != "") {
@@ -137,9 +137,10 @@
         else {
             result = database
         }
-    }
+    } */
 
     $: if (queryName || selectedTags){
+        page = 1
         filterModsByTags()
         count = result.length
     }
